@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Retha's Portfolio</title>
     <!-- add fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +18,104 @@
   </head>
   <body>
     <!-- Header Area -->
-    <header></header>
+    <header>
+      <h1> Rethabile Makgoba </h1>
+       <p class="tagline">Tech enthusisast | Problem solver | Future innovator</p>
+      <p>📍Johannesburg, South Africa | 📞 +27 67 142 7366 | 📧 <a href="mailto:rethabilemakgoba23@gmail.com">rethabilemakgoba23@gmail.com</a></p>
+      <img src="assets/images/profile.jpeg" alt="Rethabile Makgoba" class="profile-pic">
+    </header>
     <!-- Main Area -->
     <main>
-      <h1>My Amazing Portfolio</h1>
+      <section class="about">
+        <h2>About Me</h2>
+        <p>I am a motivated and adaptable individual eager to grow my career in Software Developer. I am passionate about gaining hands-on experience and developing my skills. </p>
+
+      </section>
+      <section class="details">
+        <div class="detail=box">
+          <h2>Why tech ?</h2>
+          <p> I chose tech because I believe it’s the future — and not just for innovation, but for inclusion, creativity, and impact. Learning to code has challenged me in the best ways, and every day I’m growing my skills in frontend development, problem-solving, and working in teams.</p>
+        </section>
+
+          <section class="skills">
+            <h2>What I'm good at:</h2>
+            <ul>
+              <li>🪄Creative thinking and problem solving </li>
+              <li>💬Clear communication</li>
+              <li>📱Basic Web design (HTML, CSS, a lil' JS)</li>
+              <li>📁 Staying organized, even when life isn't</li>
+            </ul>
+
+          </section>
+
+          <section class="goals">
+            <h2>My tech goals</h2>
+            <p>I want to grow into a role where I can combine logic and creativity — like web development or UX/UI design. I’m especially passionate about building things that feel good to use and make someone’s life easier. Long-term? Maybe founding something of my own.</p>
+        
+          </section>
+
+          <section>
+            <h2>Fun Facts</h2>
+            <ul>
+              <li>🌍 I speak 9 languages and learning code feels like a 10th</li>
+              <li>🎶 I code better with music (lofi beats= focus mode)</li>
+              <li>🕺 Minister of enjoyment</li>
+
+          </section>
+
+          <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+              <label for="firstName">First Name:</label><br />
+              <input type="text" id="firstName"</label><br />
+
+              <label for="lastName">last Name:</label><br />
+              <input type="text" id="lastName" name="lastName" required><br />
+
+              <label for="email>"></label>Email:</label><br />
+              <input type="email" id="email" name="email" required><br />
+
+              <label for="message">Message:</label><br />
+              <textarea id="message" name="message" rows="5" required></textarea><br />
+
+              <button type="submit">Send</button>
+            </form>
+            <div id="formOutput" class="output-box"></div>
+          </section>
+         
+    
+  
+  
+          <footer>
+            <p>Thanks for visiting my profile 🌻</p>
+            <P>Let us connect: <a href="mailto:rethabilemakgoba23@gmail.com">rethabilemakgoba23@gmail.com</a></P>
+          </footer>
+
+  
+        </div>
+
+
     </main>
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // stop form from refreshing the page
+    
+        const firstName = document.getElementById('firstName').value.trim();
+        const lastName = document.getElementById('lastName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+    
+        const outputBox = document.getElementById('formOutput');
+        outputBox.innerHTML = `
+          <h3>Message Received!</h3>
+          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong> ${message}</p>
+        `;
+        outputBox.style.display = 'block';
+        this.reset(); // clears the form
+      });
+    </script>
+    
   </body>
 </html>
